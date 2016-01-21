@@ -25,7 +25,7 @@ public final class Config {
     /**
      * My personal Last.fm API key, please use your own.
      */
-    public static final String LASTFM_API_KEY = "d5a3174eba07eb111263a69b938ad237";
+    public static final String LASTFM_API_KEY = "152c63a81b56f31ed522d2dc0a5015db";
 
     /**
      * Used to distinguish album art from artist images
@@ -58,6 +58,12 @@ public final class Config {
      * The MIME type passed to a the profile activity
      */
     public static final String MIME_TYPE = "mime_type";
+
+    /**
+     * The music folder passed to the profile activity
+     */
+    public static final String FOLDER_PATH = "folder_path";
+
 
     /**
      * Play from search intent

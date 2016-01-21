@@ -2552,6 +2552,7 @@ containing a value of this type.
         public static final int overwrite=0x7f070056;
         public static final int page_albums=0x7f070057;
         public static final int page_artists=0x7f070058;
+        public static final int page_folders=0x7f070095;
         public static final int page_genres=0x7f070059;
         public static final int page_playlists=0x7f07005a;
         public static final int page_recent=0x7f07005b;
@@ -2569,11 +2570,11 @@ containing a value of this type.
         public static final int settings_about_apollo=0x7f070067;
         public static final int settings_about_category=0x7f070068;
         public static final int settings_author_title=0x7f070069;
-        public static final int settings_axel_summary=0x7f070095;
-        public static final int settings_axel_title=0x7f070096;
+        public static final int settings_axel_summary=0x7f070096;
+        public static final int settings_axel_title=0x7f070097;
         public static final int settings_color_scheme_summary=0x7f07006a;
         public static final int settings_color_scheme_title=0x7f07006b;
-        public static final int settings_cyanogenmod_title=0x7f070097;
+        public static final int settings_cyanogenmod_title=0x7f070098;
         public static final int settings_data_category=0x7f07006c;
         public static final int settings_delete_cache_summary=0x7f07006d;
         public static final int settings_delete_cache_title=0x7f07006e;
@@ -2582,11 +2583,11 @@ containing a value of this type.
         public static final int settings_download_only_on_wifi_summary=0x7f070071;
         public static final int settings_download_only_on_wifi_title=0x7f070072;
         public static final int settings_lopez_summary=0x7f070073;
-        public static final int settings_lopez_title=0x7f070098;
-        public static final int settings_olokos_self=0x7f070099;
-        public static final int settings_olokos_title=0x7f07009a;
+        public static final int settings_lopez_title=0x7f070099;
+        public static final int settings_olokos_self=0x7f07009a;
+        public static final int settings_olokos_title=0x7f07009b;
         public static final int settings_open_source_licenses=0x7f070074;
-        public static final int settings_self_title=0x7f07009b;
+        public static final int settings_self_title=0x7f07009c;
         public static final int settings_special_thanks=0x7f070075;
         public static final int settings_storage_category=0x7f070076;
         public static final int settings_theme_chooser_title=0x7f070077;
@@ -2605,13 +2606,13 @@ containing a value of this type.
         public static final int sort_order_entry_year=0x7f070084;
         public static final int sort_order_entry_za=0x7f070085;
         public static final int status_bar_notification_info_overflow=0x7f070086;
-        public static final int tag_editor_title=0x7f07009c;
+        public static final int tag_editor_title=0x7f07009d;
         public static final int theme_set=0x7f070087;
-        public static final int title=0x7f07009d;
-        public static final int title_activity_tags=0x7f07009e;
-        public static final int track_number=0x7f07009f;
+        public static final int title=0x7f07009e;
+        public static final int title_activity_tags=0x7f07009f;
+        public static final int track_number=0x7f0700a0;
         public static final int use_default=0x7f070088;
-        public static final int year=0x7f0700a0;
+        public static final int year=0x7f0700a1;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f0a007d;

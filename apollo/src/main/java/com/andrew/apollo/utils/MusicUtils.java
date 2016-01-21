@@ -543,6 +543,34 @@ public final class MusicUtils {
     }
 
     /**
+    * @param context The {@link Context} to use.
+    * @param folder The {@link File} of the folder to work on.
+    * @return The song list for a folder.
+    */
+    public static final long[] getSongListForFolder(final Context context, File folder) {
+        final String[] projection = new String[] {
+                BaseColumns._ID
+        };
+        final StringBuilder selection = new StringBuilder();
+        selection.append(AudioColumns.IS_MUSIC + "=1"); //$NON-NLS-1$
+        selection.append(" AND " + MediaColumns.TITLE + "!=''");  //$NON-NLS-1$//$NON-NLS-2$
+        selection.append(" AND " + MediaStore.Audio.AudioColumns.DATA + " LIKE ?"); //$NON-NLS-1$//$NON-NLS-2$
+        Cursor cursor = context.getContentResolver().query(
+                MediaStore.Audio.Media.EXTERNAL_CONTENT_URI,
+                projection, selection.toString(),
+                new String[]{folder.toString() + '%'},
+                null);
+        if (cursor != null) {
+            final long[] mList = getSongListForCursor(cursor);
+            cursor.close();
+            cursor = null;
+            return mList;
+        }
+        return sEmptyList;
+    }
+
+
+    /**
      * @param context The {@link Context} to use.
      * @param id The ID of the genre.
      * @return The song list for an genre.

@@ -11,6 +11,8 @@
 
 package com.andrew.apollo.ui.activities;
 
+import java.io.File;
+
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.SearchManager;
@@ -39,6 +41,7 @@ import com.andrew.apollo.ui.fragments.profile.AlbumSongFragment;
 import com.andrew.apollo.ui.fragments.profile.ArtistAlbumFragment;
 import com.andrew.apollo.ui.fragments.profile.ArtistSongFragment;
 import com.andrew.apollo.ui.fragments.profile.FavoriteFragment;
+import com.andrew.apollo.ui.fragments.profile.FolderSongFragment;
 import com.andrew.apollo.ui.fragments.profile.GenreSongFragment;
 import com.andrew.apollo.ui.fragments.profile.LastAddedFragment;
 import com.andrew.apollo.ui.fragments.profile.PlaylistSongFragment;
@@ -223,6 +226,17 @@ public class ProfileActivity extends BaseActivity implements OnPageChangeListene
 
             // Action bar title = playlist name
             mResources.setTitle(mProfileName);
+            } else
+            // Set up the folder profile
+            if (isFolder()) {
+                    // Add the carousel images
+                    mTabCarousel.setPlaylistOrGenreProfileHeader(this, mProfileName);
+
+                    // Folder profile fragments
+                    mPagerAdapter.add(FolderSongFragment.class, mArguments);
+
+                    // Action bar title = folder name
+                    mResources.setTitle(mProfileName);
         }
 
         // Initialize the ViewPager
@@ -278,8 +292,10 @@ public class ProfileActivity extends BaseActivity implements OnPageChangeListene
      */
     @Override
     public boolean onCreateOptionsMenu(final Menu menu) {
+        if (!isFolder()) {
         // Pin to Home screen
-        getMenuInflater().inflate(R.menu.add_to_homescreen, menu);
+            getMenuInflater().inflate(R.menu.add_to_homescreen, menu);
+        }
         // Shuffle
         getMenuInflater().inflate(R.menu.shuffle, menu);
         // Sort orders
@@ -326,6 +342,9 @@ public class ProfileActivity extends BaseActivity implements OnPageChangeListene
                     list = MusicUtils.getSongListForAlbum(this, id);
                 } else if (isGenre()) {
                     list = MusicUtils.getSongListForGenre(this, id);
+                } else if (isFolder()) {
+                    list = MusicUtils.getSongListForFolder(this,
+                            new File(mArguments.getString(Config.FOLDER_PATH)));
                 }
                 if (isPlaylist()) {
                     MusicUtils.playPlaylist(this, id);
@@ -668,6 +687,14 @@ public class ProfileActivity extends BaseActivity implements OnPageChangeListene
     private final boolean isLastAdded() {
         return mType.equals(getString(R.string.playlist_last_added));
     }
+
+    /**
+     * @return True if the MIME type is "Folders", false otherwise.
+     */
+        private final boolean isFolder() {
+            return mType.equals(getString(R.string.page_folders));
+        }
+
 
     private boolean isArtistSongPage() {
         return isArtist() && mViewPager.getCurrentItem() == 0;

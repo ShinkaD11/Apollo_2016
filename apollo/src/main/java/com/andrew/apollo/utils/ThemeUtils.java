@@ -301,8 +301,10 @@ public class ThemeUtils {
      */
     public void setAddToHomeScreenIcon(final Menu search) {
         final MenuItem pinnAction = search.findItem(R.id.menu_add_to_homescreen);
-        final String pinnIconId = "ic_action_pinn_to_home";
-        setMenuItemColor(pinnAction, "pinn_to_action", pinnIconId);
+        if (pinnAction != null) {
+            final String pinnIconId = "ic_action_pinn_to_home";
+            setMenuItemColor(pinnAction, "pinn_to_action", pinnIconId);
+            }
     }
 
     /**

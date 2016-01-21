@@ -62,7 +62,7 @@ public class Song {
     
     /**
      * Constructor of <code>Song</code>
-     * 
+     *
      * @param songId The Id of the song
      * @param songName The name of the song
      * @param artistName The song artist
@@ -125,10 +125,7 @@ public class Song {
         if (mDuration != other.mDuration) {
             return false;
         }
-        if (!TextUtils.equals(mSongName, other.mSongName)) {
-            return false;
-        }
-        return true;
+        return TextUtils.equals(mSongName, other.mSongName);
     }
 
     /**
