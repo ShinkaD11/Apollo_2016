@@ -1,0 +1,6 @@
+include ':iofabricsdkandroid_fabric'
+include ':comcrashlyticssdkandroid_answers'
+include ':comcrashlyticssdkandroid_beta'
+include ':comcrashlyticssdkandroid_crashlyticscore'
+include ':comcrashlyticssdkandroid_crashlytics'
+include ':apollo'

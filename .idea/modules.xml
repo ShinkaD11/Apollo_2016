@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Apollo.iml" filepath="$PROJECT_DIR$/Apollo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apollo/apollo.iml" filepath="$PROJECT_DIR$/apollo/apollo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/comcrashlyticssdkandroid_answers/comcrashlyticssdkandroid_answers.iml" filepath="$PROJECT_DIR$/comcrashlyticssdkandroid_answers/comcrashlyticssdkandroid_answers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/comcrashlyticssdkandroid_beta/comcrashlyticssdkandroid_beta.iml" filepath="$PROJECT_DIR$/comcrashlyticssdkandroid_beta/comcrashlyticssdkandroid_beta.iml" />
+      <module fileurl="file://$PROJECT_DIR$/comcrashlyticssdkandroid_crashlytics/comcrashlyticssdkandroid_crashlytics.iml" filepath="$PROJECT_DIR$/comcrashlyticssdkandroid_crashlytics/comcrashlyticssdkandroid_crashlytics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/comcrashlyticssdkandroid_crashlyticscore/comcrashlyticssdkandroid_crashlyticscore.iml" filepath="$PROJECT_DIR$/comcrashlyticssdkandroid_crashlyticscore/comcrashlyticssdkandroid_crashlyticscore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/iofabricsdkandroid_fabric/iofabricsdkandroid_fabric.iml" filepath="$PROJECT_DIR$/iofabricsdkandroid_fabric/iofabricsdkandroid_fabric.iml" />
+    </modules>
+  </component>
+</project>

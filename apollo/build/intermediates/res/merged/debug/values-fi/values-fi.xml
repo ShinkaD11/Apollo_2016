@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="NNNtracksdeleted">
+
+        <item quantity="one">1 kappale poistettiin.</item>
+        <item quantity="other"><ns1:g id="songs_to_delete">%d</ns1:g> kappaletta poistettiin.</item>
+    </plurals>
+    <plurals name="NNNtracksfromplaylist">
+
+        <item quantity="one">1 kappale poistettu soittolistalta.</item>
+        <item quantity="other"><ns1:g example="27" id="number">%d</ns1:g> kappaletta poistettu soittolistalta.</item>
+    </plurals>
+    <plurals name="NNNtrackstofavorites">
+
+        <item quantity="one">1 kappale lisätty suosikkeihin.</item>
+        <item quantity="other"><ns1:g example="27" id="number">%d</ns1:g> kappaletta lisätty suosikkeihin.</item>
+    </plurals>
+    <plurals name="NNNtrackstoplaylist">
+
+        <item quantity="one">1 kappale lisätty soittolistalle.</item>
+        <item quantity="other"><ns1:g example="27" id="number">%d</ns1:g> kappaletta lisätty soittolistalle.</item>
+    </plurals>
+    <plurals name="NNNtrackstoqueue">
+
+        <item quantity="one">1 kappale lisätty jonoon.</item>
+        <item quantity="other"><ns1:g example="27" id="number">%d</ns1:g> kappaletta lisätty jonoon.</item>
+    </plurals>
+    <plurals name="Nalbums">
+
+        <item quantity="one">1 albumi</item>
+        <item quantity="other"><ns1:g id="count">%d</ns1:g> albumia</item>
+    </plurals>
+    <plurals name="Nartists">
+
+        <item quantity="one">1 esittäjä</item>
+        <item quantity="other"><ns1:g id="count">%d</ns1:g> esittäjää</item>
+    </plurals>
+    <plurals name="Ngenres">
+
+        <item quantity="one">1 tyylilaji</item>
+        <item quantity="other"><ns1:g id="count">%d</ns1:g> tyylilajia</item>
+    </plurals>
+    <plurals name="Nsongs">
+
+        <item quantity="one">1 kappale</item>
+        <item quantity="other"><ns1:g id="count">%d</ns1:g> kappaletta</item>
+    </plurals>
+    <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Siirry etusivulle"</string>
+    <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s, %2$s"</string>
+    <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s, %2$s, %3$s"</string>
+    <string msgid="1594238315039666878" name="abc_action_bar_up_description">"Siirry ylös"</string>
+    <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"Lisää"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"Valmis"</string>
+    <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"Näytä kaikki"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"Valitse sovellus"</string>
+    <string msgid="121134116657445385" name="abc_capital_off">"POIS KÄYTÖSTÄ"</string>
+    <string msgid="3405795526292276155" name="abc_capital_on">"KÄYTÖSSÄ"</string>
+    <string msgid="7723749260725869598" name="abc_search_hint">"Haku…"</string>
+    <string msgid="3691816814315814921" name="abc_searchview_description_clear">"Tyhjennä kysely"</string>
+    <string msgid="2550479030709304392" name="abc_searchview_description_query">"Hakulauseke"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"Haku"</string>
+    <string msgid="8928215447528550784" name="abc_searchview_description_submit">"Lähetä kysely"</string>
+    <string msgid="893419373245838918" name="abc_searchview_description_voice">"Puhehaku"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Jakaminen:"</string>
+    <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Jakaminen: %s"</string>
+    <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Kutista"</string>
+    <string name="accessibility_next">Seuraava</string>
+    <string name="accessibility_pause">Pysäytä</string>
+    <string name="accessibility_play">Toista</string>
+    <string name="accessibility_prev">Edellinen</string>
+    <string name="accessibility_repeat">Uudelleentoisto</string>
+    <string name="accessibility_repeat_all">Uudelleentoista kaikki</string>
+    <string name="accessibility_repeat_one">Uudelleentoista yksi</string>
+    <string name="accessibility_shuffle">Sekoita</string>
+    <string name="accessibility_shuffle_all">Sekoita kaikki</string>
+    <string name="add_to_favorites">Lisää suosikkeihin</string>
+    <string name="add_to_playlist">Lisää soittolistalle</string>
+    <string name="add_to_queue">Lisää jonoon</string>
+    <string name="app_name">Apollo</string>
+    <string name="app_widget_large">Apollo: 4x2</string>
+    <string name="app_widget_large_alt">Apollo: 4x2 (vaihtoehtoinen)</string>
+    <string name="app_widget_recent">Apollo: äskettäin kuunneltu</string>
+    <string name="app_widget_small">Apollo: 4x1</string>
+    <string name="app_widget_text_separator">-</string>
+    <string name="cancel">Peruuta</string>
+    <string name="cannot_be_undone">Tätä ei voi perua</string>
+    <string name="color_picker_title">Väriteema</string>
+    <string name="context_menu_delete">Poista</string>
+    <string name="context_menu_fetch_album_art">Hae albumin kansikuva</string>
+    <string name="context_menu_fetch_artist_image">Hae esittäjän kuva</string>
+    <string name="context_menu_more_by_artist">Lisää esittäjältä</string>
+    <string name="context_menu_open_in_play_store">Avaa Play-kaupassa</string>
+    <string name="context_menu_play_next">Toista seuraava</string>
+    <string name="context_menu_play_selection">Toista</string>
+    <string name="context_menu_remove_from_playlist">Poista soittolistalta</string>
+    <string name="context_menu_remove_from_recent">Poista äskettäin kuunnelluista</string>
+    <string name="context_menu_rename_playlist">Nimeä uudelleen</string>
+    <string name="context_menu_use_as_ringtone">Käytä soittoäänenä</string>
+    <string name="could_not_be_pinned_to_home_screen"><ns1:g id="name">%s</ns1:g> - ei voitu lisätä kotinäytölle</string>
+    <string msgid="942607395076646686" name="create_playlist_prompt">"Soittolistan nimi"</string>
+    <string name="current_color">Nykyinen</string>
+    <string name="delete_dialog_title">Poistetaanko <ns1:g example="album" id="item">%s</ns1:g>?</string>
+    <string name="delete_warning">Kaikki välimuistissa olevat kuvat poistetaan pysyvästi</string>
+    <string name="empty_favorite">Suosikeiksi merkitsemäsi kappaleet näkyvät tässä.</string>
+    <string name="empty_last_added">Viime kuussa lisäämäsi kappaleet näkyvät tässä.</string>
+    <string name="empty_music">Kopioi musiikkia tietokoneelta laitteeseen käyttämällä USB-kaapelia.</string>
+    <string name="empty_recent">Kuuntelemasi albumit näkyvät tässä.</string>
+    <string name="empty_search">Hakutuloksia ei löytynyt</string>
+    <string name="google_search">Google-haku</string>
+    <string name="hex">#</string>
+    <string name="menu_add_to_homescreen">Lisää kotinäytölle</string>
+    <string name="menu_clear_queue">Tyhjennä jono</string>
+    <string name="menu_clear_recents">Tyhjennä äskettäin kuunnellut</string>
+    <string name="menu_detailed">Yksityiskohtainen</string>
+    <string name="menu_equalizer">Taajuuskorjain</string>
+    <string name="menu_grid">Ruudukko</string>
+    <string name="menu_play_all">Toista kaikki</string>
+    <string name="menu_save_queue">Tallenna jono</string>
+    <string name="menu_search">Haku</string>
+    <string name="menu_settings">Asetukset</string>
+    <string name="menu_share">Jaa</string>
+    <string name="menu_shop">Osta teemoja</string>
+    <string name="menu_shuffle">Sekoita kaikki</string>
+    <string name="menu_simple">Yksinkertainen</string>
+    <string name="menu_sort_by">Lajittelujärjestys</string>
+    <string name="menu_view_as">Näytä</string>
+    <string name="new_color">Uusi</string>
+    <string name="new_photo">Valitse valokuva galleriasta</string>
+    <string name="new_playlist">Uusi soittolista</string>
+    <string name="new_playlist_name_template">Soittolista <ns1:g id="number">%d</ns1:g></string>
+    <string name="no_effects_for_you">Taajuuskorjainta ei voitu avata.</string>
+    <string name="now_listening_to">#NowPlaying <ns1:g id="title">%1$s</ns1:g> esittäjältä <ns1:g id="artist">%2$s</ns1:g> #Apollo</string>
+    <string name="old_photo">Käytä vanhaa valokuvaa</string>
+    <string name="overwrite">Korvaa</string>
+    <string name="page_albums">Albumit</string>
+    <string name="page_artists">Esittäjät</string>
+    <string name="page_genres">Tyylilajit</string>
+    <string name="page_playlists">Soittolistat</string>
+    <string name="page_recent">Äskettäin kuunnellut</string>
+    <string name="page_songs">Kappaleet</string>
+    <string name="pinned_to_home_screen"><ns1:g id="name">%s</ns1:g> lisätty kotinäytölle</string>
+    <string name="playlist_favorite">Suosikki</string>
+    <string name="playlist_favorites">Suosikit</string>
+    <string name="playlist_last_added">Viimeksi lisätyt</string>
+    <string name="playlist_renamed">Soittolista nimetty uudelleen</string>
+    <string name="remove_from_favorites">Poista suosikeista</string>
+    <string name="remove_from_queue">Poista jonosta</string>
+    <string name="remove_from_recent">Poista äskettäin kuunnelluista</string>
+    <string name="save">Tallenna</string>
+    <string name="set_as_ringtone">\"<ns1:g example="Alarm Bell" id="name">%s</ns1:g>\" asetettu soittoääneksi</string>
+    <string name="settings_about_apollo">Tietoja Apollosta</string>
+    <string name="settings_about_category">Tietoja</string>
+    <string name="settings_author_title">Tekijä</string>
+    <string name="settings_color_scheme_summary">Vaihtaa Apollon väriteemaa</string>
+    <string name="settings_color_scheme_title">Valitse Apollon oletusväriteema</string>
+    <string name="settings_data_category">Data</string>
+    <string name="settings_delete_cache_summary">Poista kaikki välimuistissa olevat kuvat</string>
+    <string name="settings_delete_cache_title">Poista välimuisti</string>
+    <string name="settings_download_artist_images_title">Lataa puuttuvat esittäjän kuvat</string>
+    <string name="settings_download_missing_artwork_title">Lataa albumin puuttuva kansikuva</string>
+    <string name="settings_download_only_on_wifi_summary">Kuvia ei ladata mobiiliverkon kautta</string>
+    <string name="settings_download_only_on_wifi_title">Lataa vain Wi-Fi-yhteydellä </string>
+    <string name="settings_lopez_summary">Kuvakkeen ja Play-kaupan bannerin suunnittelu</string>
+    <string name="settings_open_source_licenses">Avoimen lähdekoodin lisenssit</string>
+    <string name="settings_special_thanks">Erityiskiitokset</string>
+    <string name="settings_storage_category">Tallennustila</string>
+    <string name="settings_theme_chooser_title">Teemanvalitsin</string>
+    <string name="settings_ui_category">Käyttöliittymä</string>
+    <string name="settings_version_title">Versionumero</string>
+    <string name="share_track_using">Jaa kappale palvelussa:</string>
+    <string name="sort_order_entry_album">Albumi</string>
+    <string name="sort_order_entry_artist">Esittäjä</string>
+    <string name="sort_order_entry_az">A-Z</string>
+    <string name="sort_order_entry_date_added">Lisäyspäivämäärä</string>
+    <string name="sort_order_entry_duration">Pituus</string>
+    <string name="sort_order_entry_filename">Filename</string>
+    <string name="sort_order_entry_number_of_albums">Albumeiden määrä</string>
+    <string name="sort_order_entry_number_of_songs">Kappaleiden määrä</string>
+    <string name="sort_order_entry_track_list">Kappalelista</string>
+    <string name="sort_order_entry_year">Vuosi</string>
+    <string name="sort_order_entry_za">Z-A</string>
+    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="theme_set"><ns1:g id="name">%s</ns1:g> asetettu teemaksi</string>
+    <string name="use_default">Käytä oletusvalokuvaa</string>
+</resources>
