@@ -11,8 +11,6 @@ local.properties
 .gradle/
 
 # Signing files
-/apollo/build/generated/fabric/res/debug/values/com_crashlytics_build_id.xml
-/build
 .signing/
 
 # User-specific configurations
@@ -23,6 +21,7 @@ local.properties
 .idea/compiler.xml
 /apollo/build
 /.gradle
+/iofabricsdkandroid_fabric/build
 .idea/copyright/profiles_settings.xml
 .idea/encodings.xml
 .idea/misc.xml
