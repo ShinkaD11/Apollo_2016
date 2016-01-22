@@ -76,24 +76,24 @@ public class MusicHolder {
     public MusicHolder(final View view) {
         super();
         // Initialize mOverlay
-        mOverlay = new WeakReference<RelativeLayout>(
-                (RelativeLayout)view.findViewById(R.id.image_background));
+        mOverlay = new WeakReference<>(
+                (RelativeLayout) view.findViewById(R.id.image_background));
 
         // Initialize mBackground
-        mBackground = new WeakReference<ImageView>(
-                (ImageView)view.findViewById(R.id.list_item_background));
+        mBackground = new WeakReference<>(
+                (ImageView) view.findViewById(R.id.list_item_background));
 
         // Initialize mImage
-        mImage = new WeakReference<ImageView>((ImageView)view.findViewById(R.id.image));
+        mImage = new WeakReference<>((ImageView) view.findViewById(R.id.image));
 
         // Initialize mLineOne
-        mLineOne = new WeakReference<TextView>((TextView)view.findViewById(R.id.line_one));
+        mLineOne = new WeakReference<>((TextView) view.findViewById(R.id.line_one));
 
         // Initialize mLineTwo
-        mLineTwo = new WeakReference<TextView>((TextView)view.findViewById(R.id.line_two));
+        mLineTwo = new WeakReference<>((TextView) view.findViewById(R.id.line_two));
 
         // Initialize mLineThree
-        mLineThree = new WeakReference<TextView>((TextView)view.findViewById(R.id.line_three));
+        mLineThree = new WeakReference<>((TextView) view.findViewById(R.id.line_three));
     }
 
     /**

@@ -197,7 +197,7 @@ public abstract class ImageWorker {
         @SuppressWarnings("deprecation")
         public BitmapWorkerTask(final ImageView imageView, final ImageType imageType) {
             imageView.setBackgroundDrawable(mDefaultArtwork);
-            mImageReference = new WeakReference<ImageView>(imageView);
+            mImageReference = new WeakReference<>(imageView);
             mImageType = imageType;
         }
 
@@ -357,7 +357,7 @@ public abstract class ImageWorker {
         public AsyncDrawable(final Resources res, final Bitmap bitmap,
                 final BitmapWorkerTask mBitmapWorkerTask) {
             super(Color.TRANSPARENT);
-            mBitmapWorkerTaskReference = new WeakReference<BitmapWorkerTask>(mBitmapWorkerTask);
+            mBitmapWorkerTaskReference = new WeakReference<>(mBitmapWorkerTask);
         }
 
         /**
@@ -438,7 +438,7 @@ public abstract class ImageWorker {
      * Used to define what type of image URL to fetch for, artist or album.
      */
     public enum ImageType {
-        ARTIST, ALBUM;
+        ARTIST, ALBUM
     }
 
 }

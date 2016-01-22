@@ -38,7 +38,7 @@ public class ColorSchemeDialog extends AlertDialog implements
 
     private final int mCurrentColor;
 
-    private final OnColorChangedListener mListener = this;;
+    private final OnColorChangedListener mListener = this;
 
     private LayoutInflater mInflater;
 

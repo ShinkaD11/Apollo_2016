@@ -97,7 +97,7 @@ public abstract class BasePlaylistDialog extends DialogFragment {
                 mPlaylist.requestFocus();
                 // Select the playlist name
                 mPlaylist.selectAll();
-            };
+            }
         });
 
         initObjects(savedInstanceState);

@@ -61,7 +61,7 @@ public class ThemeableTextView extends TextView {
      */
     public static final class TypefaceCache {
 
-        private static final WeakHashMap<String, Typeface> MAP = new WeakHashMap<String, Typeface>();
+        private static final WeakHashMap<String, Typeface> MAP = new WeakHashMap<>();
 
         private static TypefaceCache sInstance;
 

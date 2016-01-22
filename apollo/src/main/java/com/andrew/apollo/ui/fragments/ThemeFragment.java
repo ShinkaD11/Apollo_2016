@@ -125,21 +125,20 @@ public class ThemeFragment extends Fragment implements OnItemClickListener {
         mThemePreview[0] = getResources().getDrawable(R.drawable.theme_preview);
 
         for (int i = 0; i < mThemes.size(); i++) {
-            mThemePackageName = mThemes.get(i).activityInfo.packageName.toString();
+            mThemePackageName = mThemes.get(i).activityInfo.packageName;
             mThemeName = mThemes.get(i).loadLabel(mPackageManager).toString();
             mEntries[i + 1] = mThemeName;
             mValues[i + 1] = mThemePackageName;
 
             // Theme resources
             try {
-                mThemeResources = mPackageManager.getResourcesForApplication(mThemePackageName
-                        .toString());
+                mThemeResources = mPackageManager.getResourcesForApplication(mThemePackageName);
             } catch (final NameNotFoundException ignored) {
             }
 
             // Theme preview
             final int previewId = mThemeResources.getIdentifier("theme_preview", "drawable", //$NON-NLS-2$
-                    mThemePackageName.toString());
+                    mThemePackageName);
             if (previewId != 0) {
                 mThemePreview[i + 1] = mThemeResources.getDrawable(previewId);
             }

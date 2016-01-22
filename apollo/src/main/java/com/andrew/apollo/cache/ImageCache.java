@@ -96,7 +96,7 @@ public final class ImageCache {
      * Used to temporarily pause the disk cache while scrolling
      */
     public boolean mPauseDiskAccess = false;
-    private Object mPauseLock = new Object();
+    private final Object mPauseLock = new Object();
 
     static {
         mArtworkUri = Uri.parse("content://media/external/audio/albumart");
@@ -303,9 +303,7 @@ public final class ImageCache {
                         out.close();
                         out = null;
                     }
-                } catch (final IOException e) {
-                    Log.e(TAG, "addBitmapToCache - " + e);
-                } catch (final IllegalStateException e) {
+                } catch (final IOException | IllegalStateException e) {
                     Log.e(TAG, "addBitmapToCache - " + e);
                 }
             }
@@ -460,10 +458,8 @@ public final class ImageCache {
                 final FileDescriptor fileDescriptor = parcelFileDescriptor.getFileDescriptor();
                 artwork = BitmapFactory.decodeFileDescriptor(fileDescriptor);
             }
-        } catch (final IllegalStateException e) {
+        } catch (final IllegalStateException | FileNotFoundException e) {
             // Log.e(TAG, "IllegalStateExcetpion - getArtworkFromFile - ", e);
-        } catch (final FileNotFoundException e) {
-            // Log.e(TAG, "FileNotFoundException - getArtworkFromFile - ", e);
         } catch (final OutOfMemoryError evict) {
             // Log.e(TAG, "OutOfMemoryError - getArtworkFromFile - ", evict);
             evictAll();

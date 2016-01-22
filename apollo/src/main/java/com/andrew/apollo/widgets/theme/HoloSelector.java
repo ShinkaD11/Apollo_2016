@@ -70,6 +70,6 @@ public class HoloSelector extends StateListDrawable {
      * @return A new {@link ColorDrawable}.
      */
     private static final ColorDrawable makeColorDrawable(final int color) {
-        return new WeakReference<ColorDrawable>(new ColorDrawable(color)).get();
+        return new WeakReference<>(new ColorDrawable(color)).get();
     }
 }

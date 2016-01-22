@@ -118,6 +118,7 @@ public final class ApolloUtils {
      *            {@link AsyncTask#execute(Object[])}
      * @param <T> Task argument type
      */
+    @SafeVarargs
     @SuppressLint("NewApi")
     public static <T> void execute(final boolean forceSerial, final AsyncTask<T, ?, ?> task,
             final T... args) {

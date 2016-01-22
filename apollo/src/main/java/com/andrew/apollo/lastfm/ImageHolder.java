@@ -35,7 +35,7 @@ import java.util.Set;
  */
 public abstract class ImageHolder {
 
-    protected Map<ImageSize, String> imageUrls = new HashMap<ImageSize, String>();
+    protected Map<ImageSize, String> imageUrls = new HashMap<>();
 
     /**
      * Returns a Set of all {@link ImageSize}s available.

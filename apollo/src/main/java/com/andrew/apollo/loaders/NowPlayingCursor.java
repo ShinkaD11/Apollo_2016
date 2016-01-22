@@ -210,7 +210,7 @@ public class NowPlayingCursor extends AbstractCursor {
         } catch (final Exception close) {
         }
         super.close();
-    };
+    }
 
     /**
      * Actually makes the queue
@@ -266,7 +266,6 @@ public class NowPlayingCursor extends AbstractCursor {
             mSize = mNowPlaying.length;
             if (mSize == 0) {
                 mCursorIndexes = null;
-                return;
             }
         }
     }

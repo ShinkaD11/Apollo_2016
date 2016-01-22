@@ -122,7 +122,7 @@ public class Caller {
      * @return the result of the operation
      */
     public Result call(final String method, final String apiKey, Map<String, String> params) {
-        params = new WeakHashMap<String, String>(params);
+        params = new WeakHashMap<>(params);
         InputStream inputStream = null;
 
         // no entry in cache, load from web

@@ -93,7 +93,7 @@ public final class ResponseBuilder {
             return Collections.emptyList();
         }
         final Collection<DomElement> children = element.getChildren();
-        final Collection<T> items = new ArrayList<T>(children.size());
+        final Collection<T> items = new ArrayList<>(children.size());
         for (final DomElement child : children) {
             items.add(factory.createItemFromElement(child));
         }
@@ -121,7 +121,7 @@ public final class ResponseBuilder {
             final ItemFactory<T> factory) {
         if (result != null) {
             if (!result.isSuccessful()) {
-                return new PaginatedResult<T>(0, 0, Collections.<T> emptyList());
+                return new PaginatedResult<>(0, 0, Collections.<T>emptyList());
             }
 
             final DomElement contentElement = result.getContentElement();
@@ -161,7 +161,7 @@ public final class ResponseBuilder {
         final int page = Integer.parseInt(contentElement.getAttribute("page"));
         final int totalPages = Integer.parseInt(totalPagesAttribute);
 
-        return new PaginatedResult<T>(page, totalPages, items);
+        return new PaginatedResult<>(page, totalPages, items);
     }
 
     /**

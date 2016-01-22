@@ -153,7 +153,7 @@ public class DomElement {
      * @return all matching children
      */
     public List<DomElement> getChildren(final String name) {
-        final List<DomElement> l = new ArrayList<DomElement>();
+        final List<DomElement> l = new ArrayList<>();
         final NodeList list = e.getElementsByTagName(name);
         for (int i = 0; i < list.getLength(); i++) {
             final Node node = list.item(i);

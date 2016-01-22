@@ -398,7 +398,7 @@ public abstract class BaseActivity extends FragmentActivity implements ServiceCo
          * Constructor of <code>PlaybackStatus</code>
          */
         public PlaybackStatus(final BaseActivity activity) {
-            mReference = new WeakReference<BaseActivity>(activity);
+            mReference = new WeakReference<>(activity);
         }
 
         /**
@@ -407,33 +407,38 @@ public abstract class BaseActivity extends FragmentActivity implements ServiceCo
         @Override
         public void onReceive(final Context context, final Intent intent) {
             final String action = intent.getAction();
-            if (action.equals(MusicPlaybackService.META_CHANGED)) {
-                // Current info
-                mReference.get().updateBottomActionBarInfo();
-                // Update the favorites icon
-                mReference.get().invalidateOptionsMenu();
-                // Let the listener know to the meta chnaged
-                for (final MusicStateListener listener : mReference.get().mMusicStateListener) {
-                    if (listener != null) {
-                        listener.onMetaChanged();
+            switch (action) {
+                case MusicPlaybackService.META_CHANGED:
+                    // Current info
+                    mReference.get().updateBottomActionBarInfo();
+                    // Update the favorites icon
+                    mReference.get().invalidateOptionsMenu();
+                    // Let the listener know to the meta chnaged
+                    for (final MusicStateListener listener : mReference.get().mMusicStateListener) {
+                        if (listener != null) {
+                            listener.onMetaChanged();
+                        }
                     }
-                }
-            } else if (action.equals(MusicPlaybackService.PLAYSTATE_CHANGED)) {
-                // Set the play and pause image
-                mReference.get().mPlayPauseButton.updateState();
-            } else if (action.equals(MusicPlaybackService.REPEATMODE_CHANGED)
-                    || action.equals(MusicPlaybackService.SHUFFLEMODE_CHANGED)) {
-                // Set the repeat image
-                mReference.get().mRepeatButton.updateRepeatState();
-                // Set the shuffle image
-                mReference.get().mShuffleButton.updateShuffleState();
-            } else if (action.equals(MusicPlaybackService.REFRESH)) {
-                // Let the listener know to update a list
-                for (final MusicStateListener listener : mReference.get().mMusicStateListener) {
-                    if (listener != null) {
-                        listener.restartLoader();
+                    break;
+                case MusicPlaybackService.PLAYSTATE_CHANGED:
+                    // Set the play and pause image
+                    mReference.get().mPlayPauseButton.updateState();
+                    break;
+                case MusicPlaybackService.REPEATMODE_CHANGED:
+                case MusicPlaybackService.SHUFFLEMODE_CHANGED:
+                    // Set the repeat image
+                    mReference.get().mRepeatButton.updateRepeatState();
+                    // Set the shuffle image
+                    mReference.get().mShuffleButton.updateShuffleState();
+                    break;
+                case MusicPlaybackService.REFRESH:
+                    // Let the listener know to update a list
+                    for (final MusicStateListener listener : mReference.get().mMusicStateListener) {
+                        if (listener != null) {
+                            listener.restartLoader();
+                        }
                     }
-                }
+                    break;
             }
         }
     }

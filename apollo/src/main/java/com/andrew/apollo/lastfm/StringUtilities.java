@@ -118,7 +118,7 @@ public final class StringUtilities {
         if (strings.length % 2 != 0) {
             throw new IllegalArgumentException("strings.length % 2 != 0");
         }
-        final Map<String, String> sMap = new HashMap<String, String>();
+        final Map<String, String> sMap = new HashMap<>();
         for (int i = 0; i < strings.length; i += 2) {
             sMap.put(strings[i], strings[i + 1]);
         }

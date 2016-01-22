@@ -969,7 +969,7 @@ public class AudioPlayerActivity extends FragmentActivity implements ServiceConn
          * Constructor of <code>TimeHandler</code>
          */
         public TimeHandler(final AudioPlayerActivity player) {
-            mAudioPlayer = new WeakReference<AudioPlayerActivity>(player);
+            mAudioPlayer = new WeakReference<>(player);
         }
 
         @Override
@@ -996,7 +996,7 @@ public class AudioPlayerActivity extends FragmentActivity implements ServiceConn
          * Constructor of <code>PlaybackStatus</code>
          */
         public PlaybackStatus(final AudioPlayerActivity activity) {
-            mReference = new WeakReference<AudioPlayerActivity>(activity);
+            mReference = new WeakReference<>(activity);
         }
 
         /**
@@ -1005,20 +1005,24 @@ public class AudioPlayerActivity extends FragmentActivity implements ServiceConn
         @Override
         public void onReceive(final Context context, final Intent intent) {
             final String action = intent.getAction();
-            if (action.equals(MusicPlaybackService.META_CHANGED)) {
-                // Current info
-                mReference.get().updateNowPlayingInfo();
-                // Update the favorites icon
-                mReference.get().invalidateOptionsMenu();
-            } else if (action.equals(MusicPlaybackService.PLAYSTATE_CHANGED)) {
-                // Set the play and pause image
-                mReference.get().mPlayPauseButton.updateState();
-            } else if (action.equals(MusicPlaybackService.REPEATMODE_CHANGED)
-                    || action.equals(MusicPlaybackService.SHUFFLEMODE_CHANGED)) {
-                // Set the repeat image
-                mReference.get().mRepeatButton.updateRepeatState();
-                // Set the shuffle image
-                mReference.get().mShuffleButton.updateShuffleState();
+            switch (action) {
+                case MusicPlaybackService.META_CHANGED:
+                    // Current info
+                    mReference.get().updateNowPlayingInfo();
+                    // Update the favorites icon
+                    mReference.get().invalidateOptionsMenu();
+                    break;
+                case MusicPlaybackService.PLAYSTATE_CHANGED:
+                    // Set the play and pause image
+                    mReference.get().mPlayPauseButton.updateState();
+                    break;
+                case MusicPlaybackService.REPEATMODE_CHANGED:
+                case MusicPlaybackService.SHUFFLEMODE_CHANGED:
+                    // Set the repeat image
+                    mReference.get().mRepeatButton.updateRepeatState();
+                    // Set the shuffle image
+                    mReference.get().mShuffleButton.updateShuffleState();
+                    break;
             }
         }
     }

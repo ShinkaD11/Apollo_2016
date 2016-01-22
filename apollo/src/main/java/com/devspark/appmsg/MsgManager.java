@@ -42,7 +42,7 @@ class MsgManager extends Handler {
     private Animation inAnimation, outAnimation;
 
     private MsgManager() {
-        msgQueue = new LinkedList<AppMsg>();
+        msgQueue = new LinkedList<>();
     }
 
     /**

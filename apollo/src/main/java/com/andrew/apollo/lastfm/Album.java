@@ -76,7 +76,7 @@ public class Album extends MusicEntry {
      */
     public final static Album getInfo(final Context context, final String artist,
             final String albumOrMbid, final String username, final String apiKey) {
-        final Map<String, String> params = new HashMap<String, String>();
+        final Map<String, String> params = new HashMap<>();
         params.put("artist", artist);
         params.put("album", albumOrMbid);
         MapUtilities.nullSafePut(params, "username", username);

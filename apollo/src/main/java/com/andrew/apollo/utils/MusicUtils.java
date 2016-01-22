@@ -74,7 +74,7 @@ public final class MusicUtils {
     private static ContentValues[] mContentValuesCache = null;
 
     static {
-        mConnectionMap = new WeakHashMap<Context, ServiceBinder>();
+        mConnectionMap = new WeakHashMap<>();
         sEmptyList = new long[0];
     }
 
@@ -835,7 +835,6 @@ public final class MusicUtils {
     public static void clearPlaylist(final Context context, final int playlistId) {
         final Uri uri = MediaStore.Audio.Playlists.Members.getContentUri("external", playlistId);
         context.getContentResolver().delete(uri, null, null);
-        return;
     }
 
     /**
@@ -1051,7 +1050,7 @@ public final class MusicUtils {
         };
         Cursor cursor = context.getContentResolver().query(
                 MediaStore.Audio.Playlists.Members.getContentUri("external",
-                        Long.valueOf(playlistId)), projection, null, null,
+                        playlistId), projection, null, null,
                 MediaStore.Audio.Playlists.Members.DEFAULT_SORT_ORDER);
 
         if (cursor != null) {

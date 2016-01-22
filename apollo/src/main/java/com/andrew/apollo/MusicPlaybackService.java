@@ -1001,7 +1001,7 @@ public class MusicPlaybackService extends Service {
         final int tailsize = mPlayListLen - position;
         System.arraycopy(mPlayList, position + 1 - addlen, mPlayList, position + 1, tailsize);
 
-        System.arraycopy(list, 0, mPlayList, position + 0, addlen);
+        System.arraycopy(list, 0, mPlayList, position, addlen);
 
         mPlayListLen += addlen;
         if (mPlayListLen == 0) {
@@ -1163,7 +1163,7 @@ public class MusicPlaybackService extends Service {
             final int numHistory = mHistory.size();
             int numUnplayed = numTracks;
             for (int i = 0; i < numHistory; i++) {
-                final int idx = mHistory.get(i).intValue();
+                final int idx = mHistory.get(i);
                 if (idx < numTracks && tracks[idx] >= 0) {
                     numUnplayed--;
                     tracks[idx] = -1;
@@ -1352,23 +1352,27 @@ public class MusicPlaybackService extends Service {
         musicIntent.setAction(what.replace(APOLLO_PACKAGE_NAME, MUSIC_PACKAGE_NAME));
         sendStickyBroadcast(musicIntent);
 
-        if (what.equals(META_CHANGED)) {
-            // Increase the play count for favorite songs.
-            if (mFavoritesCache.getSongId(getAudioId()) != null) {
-                mFavoritesCache.addSongId(getAudioId(), getTrackName(), getAlbumName(),
-                        getArtistName());
-            }
-            // Add the track to the recently played list.
-            mRecentsCache.addAlbumId(getAlbumId(), getAlbumName(), getArtistName(),
-                    MusicUtils.getSongCountForAlbum(this, getAlbumId()),
-                    MusicUtils.getReleaseDateForAlbum(this, getAlbumId()));
-        } else if (what.equals(QUEUE_CHANGED)) {
-            saveQueue(true);
-            if (isPlaying()) {
-                setNextTrack();
-            }
-        } else {
-            saveQueue(false);
+        switch (what) {
+            case META_CHANGED:
+                // Increase the play count for favorite songs.
+                if (mFavoritesCache.getSongId(getAudioId()) != null) {
+                    mFavoritesCache.addSongId(getAudioId(), getTrackName(), getAlbumName(),
+                            getArtistName());
+                }
+                // Add the track to the recently played list.
+                mRecentsCache.addAlbumId(getAlbumId(), getAlbumName(), getArtistName(),
+                        MusicUtils.getSongCountForAlbum(this, getAlbumId()),
+                        MusicUtils.getReleaseDateForAlbum(this, getAlbumId()));
+                break;
+            case QUEUE_CHANGED:
+                saveQueue(true);
+                if (isPlaying()) {
+                    setNextTrack();
+                }
+                break;
+            default:
+                saveQueue(false);
+                break;
         }
 
         if (what.equals(PLAYSTATE_CHANGED)) {
@@ -1445,7 +1449,6 @@ public class MusicPlaybackService extends Service {
             for (int i = 0; i < len; i++) {
                 long n = mPlayList[i];
                 if (n < 0) {
-                    continue;
                 } else if (n == 0) {
                     q.append("0;");
                 } else {
@@ -2086,7 +2089,7 @@ public class MusicPlaybackService extends Service {
                     return;
                 }
                 final Integer pos = mHistory.remove(histsize - 1);
-                mPlayPos = pos.intValue();
+                mPlayPos = pos;
             } else {
                 if (mPlayPos > 0) {
                     mPlayPos--;
@@ -2349,7 +2352,7 @@ public class MusicPlaybackService extends Service {
          */
         public MusicPlayerHandler(final MusicPlaybackService service, final Looper looper) {
             super(looper);
-            mService = new WeakReference<MusicPlaybackService>(service);
+            mService = new WeakReference<>(service);
         }
 
         /**
@@ -2447,9 +2450,9 @@ public class MusicPlaybackService extends Service {
 
     private static final class Shuffler {
 
-        private final LinkedList<Integer> mHistoryOfNumbers = new LinkedList<Integer>();
+        private final LinkedList<Integer> mHistoryOfNumbers = new LinkedList<>();
 
-        private final TreeSet<Integer> mPreviousNumbers = new TreeSet<Integer>();
+        private final TreeSet<Integer> mPreviousNumbers = new TreeSet<>();
 
         private final Random mRandom = new Random();
 
@@ -2509,7 +2512,7 @@ public class MusicPlaybackService extends Service {
          * Constructor of <code>MultiPlayer</code>
          */
         public MultiPlayer(final MusicPlaybackService service) {
-            mService = new WeakReference<MusicPlaybackService>(service);
+            mService = new WeakReference<>(service);
             mCurrentMediaPlayer.setWakeMode(mService.get(), PowerManager.PARTIAL_WAKE_LOCK);
         }
 
@@ -2737,7 +2740,7 @@ public class MusicPlaybackService extends Service {
         private final WeakReference<MusicPlaybackService> mService;
 
         private ServiceStub(final MusicPlaybackService service) {
-            mService = new WeakReference<MusicPlaybackService>(service);
+            mService = new WeakReference<>(service);
         }
 
         /**

@@ -89,7 +89,7 @@ public class PhotoSelectionDialog extends DialogFragment {
         }
         // Dialog item Adapter
         final ProfileActivity activity = (ProfileActivity) getActivity();
-        final ListAdapter adapter = new ArrayAdapter<String>(activity,
+        final ListAdapter adapter = new ArrayAdapter<>(activity,
                 android.R.layout.select_dialog_item, mChoices);
         return new AlertDialog.Builder(activity).setTitle(title)
                 .setAdapter(adapter, new DialogInterface.OnClickListener() {

@@ -42,7 +42,7 @@ public class TagEditorDialog extends AlertDialog implements TextWatcher {
 	
 	private Context mContext;
 	
-	private List<EditText> editControls = new ArrayList<EditText>();
+	private List<EditText> editControls = new ArrayList<>();
 	
 	public TagEditorDialog(final Context context, final Song mSong) {
 		super(context);

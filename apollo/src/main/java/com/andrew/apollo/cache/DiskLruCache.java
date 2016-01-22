@@ -155,7 +155,7 @@ public final class DiskLruCache implements Closeable {
 
     private Writer journalWriter;
 
-    private final LinkedHashMap<String, Entry> lruEntries = new LinkedHashMap<String, Entry>(0,
+    private final LinkedHashMap<String, Entry> lruEntries = new LinkedHashMap<>(0,
             0.75f, true);
 
     private int redundantOpCount;
@@ -499,7 +499,7 @@ public final class DiskLruCache implements Closeable {
         }
 
         redundantOpCount++;
-        journalWriter.append(READ + ' ' + key + '\n');
+        journalWriter.append(READ + ' ').append(key).append('\n');
         if (journalRebuildRequired()) {
             executorService.submit(cleanupCallable);
         }
@@ -650,7 +650,7 @@ public final class DiskLruCache implements Closeable {
         }
 
         redundantOpCount++;
-        journalWriter.append(REMOVE + ' ' + key + '\n');
+        journalWriter.append(REMOVE + ' ').append(key).append('\n');
         lruEntries.remove(key);
 
         if (journalRebuildRequired()) {
@@ -690,7 +690,7 @@ public final class DiskLruCache implements Closeable {
         if (journalWriter == null) {
             return; // already closed
         }
-        for (final Entry entry : new ArrayList<Entry>(lruEntries.values())) {
+        for (final Entry entry : new ArrayList<>(lruEntries.values())) {
             if (entry.currentEditor != null) {
                 entry.currentEditor.abort();
             }
@@ -929,7 +929,7 @@ public final class DiskLruCache implements Closeable {
             lengths = new long[valueCount];
         }
 
-        public String getLengths() throws IOException {
+        public String getLengths() {
             final StringBuilder result = new StringBuilder();
             for (final long size : lengths) {
                 result.append(' ').append(size);

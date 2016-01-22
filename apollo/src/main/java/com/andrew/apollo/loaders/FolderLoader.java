@@ -60,7 +60,7 @@ public class FolderLoader extends WrappedAsyncTaskLoader<List<File>> {
      */
     @Override
     public List<File> loadInBackground() {
-        final HashSet<File> dirs = new HashSet<File>();
+        final HashSet<File> dirs = new HashSet<>();
         mCursor = makeSongCursor(getContext());
         if (mCursor != null && mCursor.moveToFirst()) {
             do {
