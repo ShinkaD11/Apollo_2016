@@ -683,9 +683,8 @@ public final class MusicUtils {
             mService.setShuffleMode(MusicPlaybackService.SHUFFLE_NORMAL);
             final long mCurrentId = mService.getAudioId();
             final int mCurrentQueuePosition = getQueuePosition();
-            if (mCurrentQueuePosition == position && mCurrentId == mTrackList[position]) {
-
-
+            if (position != -1 && mCurrentQueuePosition == position
+                    && mCurrentId == mTrackList[position]) {
                 final long[] mPlaylist = getQueue();
                 if (Arrays.equals(mTrackList, mPlaylist)) {
                     mService.play();
