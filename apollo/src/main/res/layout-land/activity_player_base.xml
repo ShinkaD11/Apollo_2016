@@ -30,6 +30,13 @@
             android:layout_alignParentLeft="true" >
 
             <com.andrew.apollo.widgets.SquareImageView
+                android:id="@+id/audio_player_album_art_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:scaleType="fitXY" />
+
+            <com.andrew.apollo.widgets.SquareImageView
                 android:id="@+id/audio_player_album_art"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
