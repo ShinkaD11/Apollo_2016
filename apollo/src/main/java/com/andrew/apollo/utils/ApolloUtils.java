@@ -46,6 +46,10 @@ import com.andrew.apollo.widgets.ColorSchemeDialog;
 import com.andrew.apollo.widgets.TagEditorDialog;
 import com.devspark.appmsg.AppMsg;
 
+import java.io.IOException;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
 /**
  * Mostly general and UI helpers.
  * 
@@ -175,6 +179,16 @@ public final class ApolloUtils {
         if (activeNetwork != null) {
             if (!onlyOnWifi) {
                 state = activeNetwork.isConnectedOrConnecting();
+            }
+        }
+
+        //Test if network is really avaliable.
+        if(state == true) {
+            try {
+                Socket testSocket = new Socket("last.fm",80);
+                testSocket.close();
+            } catch (IOException e) {
+                state = false;
             }
         }
 
