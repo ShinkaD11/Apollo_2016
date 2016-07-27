@@ -44,3 +44,4 @@ comcrashlyticssdkandroid_beta/
 comcrashlyticssdkandroid_crashlytics/
 comcrashlyticssdkandroid_crashlyticscore/
 gradle/
+/apollo/fabric.properties
