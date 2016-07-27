@@ -18,6 +18,17 @@
             <option value="$PROJECT_DIR$/iofabricsdkandroid_fabric" />
           </set>
         </option>
+        <option name="myModules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/apollo" />
+            <option value="$PROJECT_DIR$/comcrashlyticssdkandroid_answers" />
+            <option value="$PROJECT_DIR$/comcrashlyticssdkandroid_beta" />
+            <option value="$PROJECT_DIR$/comcrashlyticssdkandroid_crashlytics" />
+            <option value="$PROJECT_DIR$/comcrashlyticssdkandroid_crashlyticscore" />
+            <option value="$PROJECT_DIR$/iofabricsdkandroid_fabric" />
+          </set>
+        </option>
       </GradleProjectSettings>
     </option>
   </component>
