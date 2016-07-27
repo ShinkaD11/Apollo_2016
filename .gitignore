@@ -20,7 +20,6 @@ local.properties
 .idea/.name
 .idea/compiler.xml
 /apollo/build
-/.gradle
 /iofabricsdkandroid_fabric/build
 .idea/copyright/profiles_settings.xml
 .idea/encodings.xml
@@ -29,7 +28,7 @@ local.properties
 .idea/scopes/scope_settings.xml
 .idea/vcs.xml
 *.iml
-apollo/fabric.properties
+fabric.properties
 
 # OS-specific files
 .DS_Store
@@ -39,3 +38,9 @@ apollo/fabric.properties
 .Trashes
 ehthumbs.db
 Thumbs.db
+build/
+comcrashlyticssdkandroid_answers/
+comcrashlyticssdkandroid_beta/
+comcrashlyticssdkandroid_crashlytics/
+comcrashlyticssdkandroid_crashlyticscore/
+gradle/
